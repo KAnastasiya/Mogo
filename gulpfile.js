@@ -172,6 +172,7 @@ gulp.task('watch', () => {
 
   gulp.watch([
     `${SRC}/blocks/**/icon/*`,
+    `${SRC}/common/scss/sprite-template.scss`,
   ]).on('change', gulp.series('sprite', 'cleanSprite', 'copySprite', 'scss', browserSync.reload));
 
   gulp.watch([
