@@ -20,4 +20,4 @@ Landing for design studio.
 
 ### Demo
 
-If you want see, how site look like, click [this link] (http://kanastasiya.github.io/Mogo)
+If you want see, how site look like, click [this link](http://kanastasiya.github.io/Mogo)
