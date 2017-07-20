@@ -1,0 +1,15 @@
+include team-member-socials-item
+
+mixin team-member(name, spec, img)
+  figure.figure.figure--team.team-member
+    .figure__img.team-member__img
+      .figure__overlay
+        ul.team-member__socials
+          +team-member__socials-item('facebook', '#')
+          +team-member__socials-item('twitter', '#')
+          +team-member__socials-item('pinterest', '#')
+          +team-member__socials-item('instagram', '#')
+      img(src='img/team/img/' + img + '.jpg', alt=name, width='875', height='490')
+    figcaption
+      h5= name
+      p= spec

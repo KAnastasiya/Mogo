@@ -1,0 +1,8 @@
+mixin feedbacks-item(name, spec, text, img)
+  figure.figure.figure--feedbacks
+    img(src='img/feedbacks/img/' + img + '.jpg', alt=name, width='110', height='110')
+    figcaption
+      header
+        h5= name
+        p= spec
+      p= text

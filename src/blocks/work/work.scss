@@ -1,0 +1,72 @@
+.work {
+  &__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: $tablet-max) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item--3 {
+    grid-row: 1/ span 2;
+    grid-column: 2;
+
+    @media (min-width: $tablet-max) {
+      grid-row: 1/ span 2;
+      grid-column: 3;
+    }
+  }
+
+  &__photo {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      .work__overlay {
+        display: block;
+      }
+    }
+  }
+
+  &__overlay {
+    --work-overlay-icon-pos: 20px;
+
+    @include overlay(var(--overlay--gradient));
+
+    display: none;
+
+    &::before {
+      @extend .icon--picture;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% - var(--work-overlay-icon-pos)));
+    }
+
+    &::after {
+      @include font-size(14px);
+
+      content: 'creatively designed';
+      color: var(--color-white);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(calc(-50% + var(--work-overlay-icon-pos)));
+
+      @media (min-width: $desktop-max) {
+        @include font-size(18px);
+      }
+    }
+  }
+}
+
+@import '../work-comments/work-comments';

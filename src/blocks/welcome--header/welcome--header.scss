@@ -1,0 +1,24 @@
+.page-header {
+  padding: 28px 0;
+  margin-bottom: 50px;
+
+  @media (min-width: $desktop-min) {
+    margin-bottom: 105px;
+  }
+
+  .page-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    @include font-size(30px);
+
+    color: currentColor;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+}

@@ -1,0 +1,26 @@
+include ../_section/section-header
+include blog-item
+
+a#blog
+section.section.section--blog.blog
+  .section__container
+    +section-header(
+      'Our stories',
+      'Latest blog'
+    )
+    .section__content.blog__content
+      +blog-item(
+        '15', 'Jan',
+        'Lorem ipsum dolor sit amet',
+        'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        '1', '542', '17')
+      +blog-item(
+        '14', 'Jan',
+        'Sed do eiusmod tempor',
+        'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        '2', '942', '187')
+      +blog-item(
+        '10', 'Jan',
+        'Incididunt ut labore et dolore',
+        'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        '3', '52', '07')

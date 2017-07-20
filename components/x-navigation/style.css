@@ -1,0 +1,82 @@
+x-navigation[layout='large'] {
+  position: relative;
+}
+
+x-navigation[layout='large'] .toggle {
+  display: none;
+}
+
+x-navigation[layout='tablet'],
+x-navigation[layout='mobile'] {
+  --icon-height: 20px;
+  --line-height: 2px;
+
+  min-width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+x-navigation[layout='mobile'] {
+  left: 0;
+}
+
+x-navigation[layout='tablet'] .toggle,
+x-navigation[layout='mobile'] .toggle {
+  text-decoration: none;
+  display: block;
+  width: 30px;
+  height: var(--icon-height);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+x-navigation[layout='tablet'] .toggle:focus,
+x-navigation[layout='mobile'] .toggle:focus {
+  outline: none;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: var(--line-height);
+  background: var(--color-yellow, yellow);
+  position: absolute;
+  left: 0;
+  transition: all 400ms;
+}
+
+.line-1 {
+  top: 0;
+}
+
+.line-2 {
+  top: 50%;
+}
+
+.line-3 {
+  top: 100%;
+}
+
+.toggle:hover .line-1,
+.toggle:focus .line-1 {
+  transform: translateY(calc(-1 * var(--line-height) / 2));
+}
+
+.toggle:hover .line-3,
+.toggle:focus .line-3 {
+  transform: translateY(calc(var(--line-height) / 2));
+}
+
+.toggle.active .line-1 {
+  transform: translateY(calc(var(--icon-height) / 2)) translateX(0) rotate(45deg);
+}
+
+.toggle.active .line-2 {
+  opacity: 0;
+}
+
+.toggle.active .line-3 {
+  transform: translateY(calc(-1 * var(--icon-height) / 2)) translateX(0) rotate(-45deg);
+}

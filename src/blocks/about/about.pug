@@ -1,0 +1,18 @@
+include ../_section/section-header
+
+section.section.section--about.about
+  .section__container
+    +section-header(
+      'What we do',
+      'Story about us',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    )
+    .section__content
+      - var n = 1
+      while n < 4
+        figure.figure.figure--about
+          .figure__img
+            .figure__overlay
+            img(src='img/about/img/' + n++ + '.jpg', alt='', width='480', height='390')
+
+  include ../about-facts/about-facts

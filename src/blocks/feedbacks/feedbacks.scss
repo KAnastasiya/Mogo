@@ -1,0 +1,61 @@
+.feedbacks {
+  padding-bottom: 30px;
+  background: var(--overlay-bg) url(img/feedbacks/img/bg.jpg) no-repeat center center;
+  background-size: cover;
+
+  &__content {
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+}
+
+.figure--feedbacks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $tablet-max) {
+    width: 45%;
+    margin-bottom: 80px;
+
+    &:not(:nth-of-type(2n+2)) {
+      --margin-left: 0;
+
+      margin-left: var(--margin-left);
+
+      @media (min-width: $desktop-max) {
+        --margin-left: 40px;
+      }
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  img {
+    @include square(110px);
+
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+
+  figcaption {
+    position: relative;
+
+    header {
+      margin-bottom: 25px;
+
+      p {
+        padding-bottom: 15px;
+      }
+
+      &::after {
+        @include line(60px, 3px, var(--color-red));
+
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+}

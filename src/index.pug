@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Mogo
+    link(rel='icon', type="image/png", sizes='16x16', href='favicon.png')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400&amp;subset=latin-ext', rel='stylesheet')
+    link(href='components/x-navigation-item/index.html', rel='import', async)
+    link(href='components/x-navigation/index.html', rel='import', async)
+    link(href='components/x-accordion-item/index.html', rel='import', async)
+    link(href='components/x-accordion/index.html', rel='import', async)
+    link(href='components/x-carousel-item/index.html', rel='import', async)
+    link(href='components/x-carousel/index.html', rel='import', async)
+    link(href='style.min.css', rel='stylesheet')
+  body
+    include blocks/welcome/welcome
+    include blocks/about/about
+    include blocks/services/services
+    include blocks/design/design
+    include blocks/do/do
+    include blocks/team/team
+    include blocks/work/work
+    include blocks/feedbacks/feedbacks
+    include blocks/blog/blog
+    include blocks/map/map
+    include blocks/footer/footer

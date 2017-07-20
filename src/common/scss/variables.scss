@@ -1,0 +1,36 @@
+// SCSS variables
+$font-family-main: Montserrat, sans-serif;
+$font-family-add1: Kaushan Script, cursive;
+$font-family-add2: Roboto, sans-serif;
+$font-base:        14px;
+
+$tablet-min:       480px;
+$tablet-max:       768px;
+$desktop-min:      $tablet-max + 1;
+$desktop-max:      1210px;
+
+// CSS variables
+:root {
+  --color-white: #fff;
+  --color-yellow: #fce38a;
+  --color-red: #f38181;
+  --color-green: #95e1d3;
+
+  --font-color: #333;
+  --font-color-dark: #999;
+  --font-color-light: #ccc;
+
+  --bg-gray: #f8f8f8;
+  --border-gray: #e5e5e5;
+
+  --overlay-bg: #d9d9d9;
+  --overlay--gradient: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+
+  --scrollbar-width: 8px;
+  --scrollbar-padding-right: 10px;
+  --scrollbar-track-color: #ddd;
+  --scrollbar-thumb-color: #aaa;
+  --scrollbar-thumb-color: #bbb;
+
+  --section-margin-bottom: 105px;
+}

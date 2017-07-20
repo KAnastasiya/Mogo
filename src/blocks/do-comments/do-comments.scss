@@ -1,0 +1,9 @@
+.section--comments-do {
+  padding: 40px 0;
+  margin-top: var(--section-margin-bottom);
+  background-color: var(--bg-gray);
+
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+}

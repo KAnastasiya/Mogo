@@ -1,0 +1,57 @@
+figure {
+  margin: 0;
+
+  .figure__overlay {
+    @include overlay(var(--overlay--gradient));
+
+    display: none;
+
+    &::after {
+      @include font-size(14px);
+
+      color: var(--color-white);
+      font-weight: 700;
+      text-transform: uppercase;
+      position: absolute;
+
+      @media (min-width: $desktop-min) {
+        @include font-size(18px);
+      }
+    }
+  }
+}
+
+// Simple card
+.figure--simple-card {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-min) {
+    margin-bottom: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-green);
+    cursor: pointer;
+
+    .figure__img {
+      position: relative;
+      top: -10px;
+      left: -10px;
+    }
+
+    .figure__overlay {
+      display: block;
+    }
+  }
+
+  figcaption {
+    padding-top: 30px;
+    background-color: var(--color-white);
+  }
+}

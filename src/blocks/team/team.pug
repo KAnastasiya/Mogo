@@ -1,0 +1,16 @@
+include ../_section/section-header
+include team-member
+
+section.section.section--team.team
+  .section__container
+    +section-header(
+      'We work are',
+      'Meet our team',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    )
+    .section__content
+      +team-member('Matthew Dix', 'Graphic Design', 'dix')
+      +team-member('Christopher Campbell', 'Branding/UX design', 'campbell')
+      +team-member('Michael Fertig', 'Developer', 'fertig')
+
+  include ../team-partners/team-partners

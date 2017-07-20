@@ -1,0 +1,15 @@
+mixin blog-item(date, month, title, text, img, view, comments)
+  figure.figure.figure--blog__item.blog__item
+    .blog__item-container
+      .blog__item-img
+        .blog__item--date
+          p= date
+            span= month
+        img(src='img/blog/img/' + img + '.jpg', alt='', width='380', height='240')
+      figcaption
+        h5.blog__item-title
+          a(href='#')= title
+        p= text
+    footer.blog__item-footer
+      p.blog__item-view= view
+      p.blog__item-comments= comments

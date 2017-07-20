@@ -1,0 +1,90 @@
+:host {
+  --border: 1px solid var(--color-gray, #eee);
+
+  display: block;
+  contain: content;
+}
+
+.title {
+  display: flex;
+  padding: 15px;
+  border: var(--border);
+  position: relative;
+  cursor: pointer;
+}
+
+.title:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.title::after {
+  content: '';
+  color: #ccc;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.details {
+  width: 1px;
+  height: 1px;
+  padding: 20px 20px 30px;
+  border-top: var(--border);
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.details.open {
+  width: auto;
+  height: auto;
+  border: var(--border);
+  margin-bottom: 10px;
+  position: static;
+  overflow: visible;
+  clip: auto;
+  animation: fadeIn ease-in 0.5s;
+}
+
+.text {
+  padding-right: var(--scrollbar-padding-right, 0);
+  max-height: 105px;
+  overflow-y: auto;
+}
+
+.text::-webkit-scrollbar {
+  width: var(--scrollbar-width, 15px);
+}
+
+.text::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color, #eee);
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color, #999);
+}
+
+.text::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-color, #bbb);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

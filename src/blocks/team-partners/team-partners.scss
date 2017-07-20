@@ -1,0 +1,15 @@
+.section--partners {
+  padding: 60px 0;
+  margin-top: var(--section-margin-bottom);
+  background-color: var(--bg-gray);
+
+  @media (max-width: $desktop-max) {
+    display: none;
+  }
+
+  .section__container {
+    height: 130px;
+    background: url(img/team/img/footer.png) no-repeat;
+    background-size: contain;
+  }
+}

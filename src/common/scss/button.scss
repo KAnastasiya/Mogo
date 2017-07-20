@@ -1,0 +1,43 @@
+.btn {
+  --padding-v: 15px;
+
+  @include font-size(14px);
+
+  font-family: $font-family-main;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px var(--padding-v);
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-min) {
+    --padding-v: 35px;
+  }
+
+  &--primary {
+    color: var(--color-white);
+    background-color: var(--color-green);
+  }
+
+  &--icon {
+    @include square(20px);
+
+    font-size: 0;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-green);
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}

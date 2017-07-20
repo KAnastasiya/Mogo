@@ -1,0 +1,44 @@
+@mixin size($width, $height) {
+  width: $height;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin text-overflow($width) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: $width;
+  overflow: hidden;
+}
+
+@mixin line($width, $height, $bg) {
+  content: '';
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}
+
+@function calculate-rem($size) {
+  $remSize: $size / $font-base;
+
+  @return #{$remSize}rem;
+}
+
+@mixin overlay($color, $top: 0, $left: 0) {
+  width: 100%;
+  height: 100%;
+  background: $color;
+  position: absolute;
+  top: $top;
+  left: $left;
+}

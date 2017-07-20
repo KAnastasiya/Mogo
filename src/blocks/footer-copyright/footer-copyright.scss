@@ -1,0 +1,30 @@
+.section--copyright {
+  margin-bottom: 0;
+
+  .section__container {
+    --padding: 10px;
+
+    text-align: center;
+    padding: var(--padding);
+    border-top: 1px solid var(--border-gray);
+    margin-top: 70px;
+
+    @media (min-width: $tablet-max) {
+      --padding: 24px;
+    }
+
+    p {
+      color: var(--font-color);
+    }
+
+    a {
+      color: var(--color-red);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-skip: ink;
+      }
+    }
+  }
+}

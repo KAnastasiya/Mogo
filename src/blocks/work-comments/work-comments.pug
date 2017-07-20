@@ -1,0 +1,15 @@
+section.section.section--comments-work
+  .section__container
+    x-carousel
+      x-carousel-item
+        img(src='img/work-comments/img/1.png', width='210', height='210', slot='img')
+        blockquote(slot='text') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+        cite(slot='author') Joshua Earle
+      x-carousel-item
+        img(src='img/work-comments/img/2.png', width='210', height='210', slot='img')
+        blockquote(slot='text') Lorem ipsum dolor sit amet
+        cite(slot='author') Mike Bin
+      x-carousel-item(selected)
+        img(src='img/work-comments/img/3.png', width='210', height='210', slot='img')
+        blockquote(slot='text') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        cite(slot='author') Mike Bin

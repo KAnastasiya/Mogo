@@ -1,0 +1,7 @@
+.section--comments-work {
+  padding: 100px 0 135px;
+
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+}

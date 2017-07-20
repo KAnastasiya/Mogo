@@ -1,0 +1,67 @@
+:host {
+  display: flex;
+  contain: content;
+}
+
+figure {
+  display: none;
+  margin: 0 75px;
+}
+
+figure.current {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img {
+  flex: 1 0 auto;
+  margin: 0 30px 0 35px;
+}
+
+figcaption {
+  flex: 1 1 auto;
+  margin: 0 0 0 30px;
+}
+
+.text {
+  padding-right: var(--scrollbar-padding-right, 0);
+  margin-bottom: 20px;
+  min-height: 50px;
+  max-height: 95px;
+  overflow-y: auto;
+}
+
+.text::-webkit-scrollbar {
+  width: var(--scrollbar-width, 15px);
+}
+
+.text::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color, #eee);
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color, #999);
+}
+
+.text::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-color, #bbb);
+}
+
+.author {
+  padding-left: 70px;
+  position: relative;
+}
+
+:host([layout="mobile"]) figure {
+  margin: 0 50px;
+}
+
+:host([layout="mobile"]) .img {
+  display: none;
+}
+
+:host([layout="mobile"]) figcaption {
+  width: 100%;
+  margin-left: 0;
+}

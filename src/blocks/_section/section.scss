@@ -1,0 +1,61 @@
+.section {
+  padding: 0;
+  position: relative;
+
+  &__overlay {
+    @include overlay(rgba(255, 255, 255, 0.8), 0, 0);
+  }
+
+  &__container {
+    --container-width: 100%;
+    --container-padding-h: 15px;
+
+    width: var(--container-width);
+    padding: 0 var(--container-padding-h);
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: $desktop-max) {
+      --container-width: 1200px;
+      --container-padding-h: 0;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    padding-top: 80px;
+
+    hgroup {
+      padding-bottom: 45px;
+
+      &::after {
+        @include line(60px, 3px, var(--color-red));
+      }
+    }
+
+    p {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 40px;
+
+      @media (min-width: $desktop-min) {
+        margin-bottom: 85px;
+      }
+
+      @media (min-width: $desktop-max) {
+        padding-right: 120px;
+        padding-left: 120px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-min) {
+      flex-direction: row;
+    }
+  }
+}

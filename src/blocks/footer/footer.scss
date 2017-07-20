@@ -1,0 +1,8 @@
+.page-footer {
+  --title-line-height: 45px;
+
+  background-color: var(--bg-gray);
+}
+
+@import '../footer-content/footer-content';
+@import '../footer-copyright/footer-copyright';

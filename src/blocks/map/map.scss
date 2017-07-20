@@ -1,0 +1,37 @@
+.section--map {
+  color: var(--color-red);
+  text-align: center;
+  padding: 80px 0;
+  margin-top: var(--section-margin-bottom);
+  background: var(--overlay-bg) url(img/map/img/bg.jpg) no-repeat center center;
+
+  a {
+    @include size(20px, 25px);
+    @include font-size(24px);
+
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 0;
+    position: relative;
+
+    &::before {
+      @extend .icon--pin;
+
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      @include line(60px, 3px, currentColor);
+
+      bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

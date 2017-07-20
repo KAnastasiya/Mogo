@@ -1,0 +1,18 @@
+include ../_section/section-header
+
+a#work
+section.section.section--work.work
+  .section__container
+    +section-header(
+      'We work do',
+      'Some of our work',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    )
+  .section__content.work__content
+    - var n = 1
+    while n < 8
+      div(class='work__item--' + n).work__photo
+        .fiqure__overlay.work__overlay
+        img(src='img/work/img/' + n++ + '.jpg', alt='', width='480', height='390')
+
+  include ../work-comments/work-comments

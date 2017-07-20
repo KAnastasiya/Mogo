@@ -1,0 +1,38 @@
+.input {
+  @mixin _placeholder($color, $weight, $style) {
+    &::-webkit-input-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-style: $style;
+    }
+
+    &::-moz-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-style: $style;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color;
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+
+  @include font-size(14px);
+  @include _placeholder(var(--font-color-light), 300, italic);
+
+  font-family: $font-family-add2;
+  flex: 1 1 100%;
+  padding: 14px;
+  border: 1px solid #e7e7e7;
+  min-width: 0;
+
+  &:focus {
+    outline: 2px solid var(--color-green);
+  }
+}
+
+.label {
+  font-size: 0;
+}

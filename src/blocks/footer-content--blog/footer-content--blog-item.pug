@@ -1,0 +1,11 @@
+mixin footer-blog-item(title, date, img)
+  figure.fiqure.figure--footer-blog.footer-blog__item
+    .footer-blog__img
+      img(src='img/footer-content--blog/img/' + img + '.jpg', alt='', width='120', height='80')
+    figcaption
+      .footer-blog__text-box
+        .footer-blog__text
+          a(href='#')
+            h6= title
+      p= date
+

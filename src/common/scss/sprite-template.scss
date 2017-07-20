@@ -1,0 +1,11 @@
+<% _.forEach(svg, function(svgItem) { %>
+.icon--<%=svgItem.name%> {
+  content: '';
+  width: <%= svgItem.width %>px;
+  height: <%= svgItem.height %>px;
+  background-image: url('../sprite.svg');
+  background-repeat: no-repeat;
+  background-position: <%= svgItem.positionX %>px <%= svgItem.positionY %>px;
+  position: absolute;
+}
+<% }); %>

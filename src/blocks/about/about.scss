@@ -1,0 +1,24 @@
+.figure--about {
+  @extend .figure--simple-card;
+
+  .figure__overlay {
+    --fiqure-overlay-icon-pos: 20px;
+
+    &::before {
+      @extend .icon--users;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% - var(--fiqure-overlay-icon-pos)));
+    }
+
+    &::after {
+      content: 'super team';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, calc(-50% + var(--fiqure-overlay-icon-pos)));
+    }
+  }
+}
+
+@import '../about-facts/about-facts';

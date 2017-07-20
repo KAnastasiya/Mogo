@@ -1,0 +1,50 @@
+.figure--team {
+  @extend .figure--simple-card;
+}
+
+.team-member__socials {
+  font-size: 0;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  list-style: none;
+  transform: translate(-50%, -50%);
+
+  &-item {
+    display: inline-block;
+    padding: 15px;
+    background-color: var(--color-yellow);
+
+    &:not(:last-of-type) {
+      border-right: 1px solid var(--color-red);
+    }
+
+    &:hover {
+      background-color: var(--color-white);
+    }
+  }
+
+  &-link {
+    $_icons: (facebook, twitter, pinterest, instagram);
+
+    @each $icon in $_icons {
+      &--#{$icon}::before {
+        @extend .icon--#{$icon}_big;
+      }
+    }
+
+    @include square(26px);
+
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+@import '../team-partners/team-partners';

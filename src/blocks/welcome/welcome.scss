@@ -1,0 +1,44 @@
+.welcome {
+  color: var(--color-white);
+  background:
+    var(--overlay--gradient),
+    url('img/welcome/img/bg.jpg') no-repeat;
+
+  &__content {
+    text-align: center;
+    padding-bottom: 100px;
+
+    @media (min-width: $desktop-min) {
+      padding-bottom: 160px;
+    }
+  }
+
+  &__titles {
+    border: 1px solid transparent;
+    margin: 0 0 50px;
+
+    &::after {
+      @include line(60px, 3px, currentColor);
+    }
+  }
+
+  &__link {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 30px;
+    border: 3px solid var(--color-white);
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+@import '../welcome--header/welcome--header';
