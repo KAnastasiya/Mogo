@@ -3,6 +3,7 @@
   background:
     var(--overlay--gradient),
     url('img/welcome/img/bg.jpg') no-repeat;
+  background-size: cover;
 
   &__content {
     text-align: center;

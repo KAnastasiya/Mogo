@@ -4,6 +4,7 @@
   padding: 80px 0;
   margin-top: var(--section-margin-bottom);
   background: var(--overlay-bg) url(img/map/img/bg.jpg) no-repeat center center;
+  background-size: cover;
 
   a {
     @include size(20px, 25px);
