@@ -72,9 +72,9 @@ gulp.task('img', () =>
     .pipe(plugins.imagemin([
       imageminJpegRecompress({
         loops: 4,
-        min: 50,
+        min: 40,
         max: 65,
-        quality: 'high',
+        quality: 'medium',
         strip: true,
         progressive: true
       }),

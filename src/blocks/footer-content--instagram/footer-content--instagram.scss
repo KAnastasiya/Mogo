@@ -3,8 +3,8 @@
 --margin-top: var(--section-margin-bottom);
 
   width: var(--width);
-  min-width: var(--width);
   margin-top: var(--margin-top);
+  min-width: var(--width);
 
   @media (min-width: $tablet-max) {
     --width: 266px;

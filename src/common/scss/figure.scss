@@ -22,36 +22,40 @@ figure {
 }
 
 // Simple card
-.figure--simple-card {
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
+.figure {
+  $this: &;
 
-  @media (min-width: $tablet-min) {
-    margin-bottom: 0;
+  &--simple-card {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
 
-    &:not(:last-of-type) {
-      margin-right: 20px;
-    }
-  }
+    @media (min-width: $tablet-min) {
+      margin-bottom: 0;
 
-  &:hover {
-    background-color: var(--color-green);
-    cursor: pointer;
-
-    .figure__img {
-      position: relative;
-      top: -10px;
-      left: -10px;
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
     }
 
-    .figure__overlay {
-      display: block;
-    }
-  }
+    &:hover {
+      background-color: var(--color-green);
+      cursor: pointer;
 
-  figcaption {
-    padding-top: 30px;
-    background-color: var(--color-white);
+      #{$this}__img {
+        position: relative;
+        top: -10px;
+        left: -10px;
+      }
+
+      #{$this}__overlay {
+        display: block;
+      }
+    }
+
+    figcaption {
+      padding-top: 30px;
+      background-color: var(--color-white);
+    }
   }
 }

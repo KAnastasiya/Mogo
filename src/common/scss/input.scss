@@ -25,7 +25,7 @@
   font-family: $font-family-add2;
   flex: 1 1 100%;
   padding: 14px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--border-gray, #e7e7e7);
   min-width: 0;
 
   &:focus {
