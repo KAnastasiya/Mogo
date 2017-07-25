@@ -10,6 +10,7 @@ const plugins = require('gulp-load-plugins')();
 const SRC = 'src';
 const PUBLIC = './';
 
+
 // Pug
 gulp.task('pug', () =>
   gulp
@@ -150,19 +151,19 @@ gulp.task('watch', () => {
   gulp.watch([
     `${SRC}/blocks/**/*.pug`,
     `${SRC}/common/pug/*.pug`,
-    `${SRC}/index.pug`
+    `${SRC}/*.pug`
   ]).on('change', gulp.series('pug', browserSync.reload));
 
   gulp.watch([
     `${SRC}/blocks/**/*.scss`,
     `${SRC}/common/scss/*.scss`,
-    `${SRC}/style.scss`
+    `${SRC}/*.scss`
   ]).on('change', gulp.series('scss', browserSync.reload));
 
   gulp.watch([
     `${SRC}/blocks/**/*.js`,
     `${SRC}/common/js.js`,
-    `${SRC}/script.js`
+    `${SRC}/*.js`
   ]).on('change', gulp.series('js', browserSync.reload));
 
   gulp.watch([
