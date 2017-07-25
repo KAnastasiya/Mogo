@@ -11,6 +11,7 @@
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
     "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.1.0",
     "eslint-loader": "^1.9.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
@@ -30,15 +31,12 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.0.1",
     "node-normalize-scss": "^3.0.0",
-    "postcss": "^6.0.7",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.6.0",
     "stylelint-scss": "^1.5.1",
     "vinyl-named": "^1.1.0",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.5.1",
-    "webpack-hot-middleware": "^2.18.2",
     "webpack-stream": "^3.2.0"
   }
 }
