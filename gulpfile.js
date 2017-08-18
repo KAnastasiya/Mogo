@@ -3,8 +3,6 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
-const webpack = require('webpack-stream');
-const named = require('vinyl-named');
 const plugins = require('gulp-load-plugins')();
 
 const SRC = 'src';
@@ -43,25 +41,6 @@ gulp.task('scss', () =>
       suffix: '.min'
     }))
     .pipe(plugins.sourcemaps.write())
-    .pipe(gulp.dest(PUBLIC))
-);
-
-
-// Scripts
-gulp.task('js', () =>
-  gulp
-    .src(`${SRC}/*.js`)
-    .pipe(plugins.plumber({
-      errorHandler: plugins.notify.onError(err => ({
-        title: 'Webpack',
-        message: err.message
-      }))
-    }))
-    .pipe(named())
-    .pipe(webpack(require('./webpack.config.js')))
-    .pipe(plugins.rename({
-      suffix: '.min'
-    }))
     .pipe(gulp.dest(PUBLIC))
 );
 
@@ -159,12 +138,6 @@ gulp.task('watch', () => {
     `${SRC}/common/scss/*.scss`,
     `${SRC}/*.scss`
   ]).on('change', gulp.series('scss', browserSync.reload));
-
-  gulp.watch([
-    `${SRC}/blocks/**/*.js`,
-    `${SRC}/common/js.js`,
-    `${SRC}/*.js`
-  ]).on('change', gulp.series('js', browserSync.reload));
 
   gulp.watch([
     `${SRC}/blocks/**/img/*`,
